@@ -14,9 +14,9 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
     : "lg:ml-[90px]";
 
   return (
-    <div className="xl:flex 2xl:flex">
+    <div className="lg:flex">
       <AppSidebar />
-      <div className={`flex-1 ${mainContentMargin} bg-gray-500`}>
+      <div className={`flex-1 ${mainContentMargin} bg-gray-500 min-h-screen`}>
         {children}
       </div>
     </div>
