@@ -4,6 +4,7 @@ import AppHeader from "@/layout/AppHeader";
 import { useSidebar } from "@/context/SidebarContext";
 
 import React from "react";
+import Backdrop from "@/layout/Backdrop";
 
 export default function AdminLayout({
   children,
@@ -21,6 +22,7 @@ export default function AdminLayout({
   return (
     <div className="lg:flex">
       <AppSidebar />
+      <Backdrop />
       <div className={`flex-1 ${mainContentMargin} bg-gray-100 min-h-screen`}>
         <AppHeader />
         <div className="p-4">{children}</div>

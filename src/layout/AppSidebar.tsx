@@ -64,17 +64,16 @@ const AppSidebar = () => {
 
   return (
     <aside
-      className={`fixed top-0 left-0 border-r border-gray-200 px-6 h-screen
-    ${isExpanded || isHovered || isMobileOpen ? "w-[290px]" : "w-[90px]"}
-
-    ${isMobileOpen ? "translate-x-0" : "-translate-x-full"}
-    lg:translate-x-0
-  `}
+      className={`fixed top-0 left-0 border-r border-gray-200 px-6 h-screen bg-white z-50
+        ${isExpanded || isHovered || isMobileOpen ? "w-[290px]" : "w-[90px]"}
+        ${isMobileOpen ? "translate-x-0" : "-translate-x-full"}
+        lg:translate-x-0
+      `}
       onMouseEnter={() => !isExpanded && setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <div
-        className={`flex items-center py-4 ${
+        className={`flex items-center py-6 ${
           isExpanded || isMobileOpen || isHovered
             ? "justify-start"
             : "justify-center"
