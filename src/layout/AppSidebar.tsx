@@ -73,7 +73,7 @@ const AppSidebar = () => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div
-        className={`flex items-center py-6 ${
+        className={`flex items-center py-8 ${
           isExpanded || isMobileOpen || isHovered
             ? "justify-start"
             : "justify-center"
