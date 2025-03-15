@@ -40,9 +40,15 @@ const AppSidebar = () => {
                 href={nav.path}
                 className={`menu-item ${
                   isActive(nav.path) ? "menu-item-active" : "menu-item-inactive"
-                }`}
+                }
+                ${
+                  isExpanded || isHovered || isMobileOpen
+                    ? "justify-start"
+                    : "justify-center"
+                }
+                `}
               >
-                <span className="">{nav.icon}</span>
+                <span>{nav.icon}</span>
                 {(isExpanded || isHovered || isMobileOpen) && (
                   <span>{nav.name}</span>
                 )}
